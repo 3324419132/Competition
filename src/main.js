@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
+import './index.css'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import App from './App.vue'
@@ -19,9 +20,11 @@ app.use(ElementPlus, {
 })
 
 // 配置pinia
-app.use(createPinia())
+const pinia = createPinia()
+app.use(pinia)
 
 
 // 导入路由
 app.use(router)
+
 app.mount('#app')
